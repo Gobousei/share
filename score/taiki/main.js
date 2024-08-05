@@ -1,7 +1,7 @@
 
 var bpm =83;//**bpm */
-var four_measure = 11;//**４拍子の小節数 */
-var three_measure = 5;//**３拍子の小節数 */
+var four_measure = 8;//**４拍子の小節数 */
+var three_measure = 4;//**３拍子の小節数 */
 let spare =3;//**予備小節数 */
 const buttonStart = document.querySelector('#buttonStart')
 const buttonStop = document.querySelector('#buttonStop')
