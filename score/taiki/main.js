@@ -36,20 +36,20 @@ async function main () {//**カメラの起動を含む常時起動関数 */
       mediaRecorder.start();
       Count();
       buttonStart.style.display='none';
+      buttonStop.style.display='block';
       buttonStart.setAttribute('disabled', '')
       buttonStop.removeAttribute('disabled')
-      buttonStop.style.display='block';
     })
   
     buttonStop.addEventListener('click', () => {//**収録ストップ */
       mediaRecorder.stop();
       videoLive.style.display='none';
-      videoRecorded.style.display='block';
-      buttonReset.style.display='block';
       buttonStop.style.display='none';
+      videoRecorded.style.display='inline-block';
+      buttonReset.style.display='inline-block';
+      downroadbutton.style.display='inline-block';
       buttonStart.removeAttribute('disabled')
       buttonStop.setAttribute('disabled', '')
-      downroadbutton.style.display='block';
     })
   
     mediaRecorder.addEventListener('dataavailable', event => {//**再生 */
@@ -77,7 +77,7 @@ async function main () {//**カメラの起動を含む常時起動関数 */
 
 
   function Count(){//**メトロノーム */
-    var ms = 60000/bpm;//**bpmから一泊当たりのミリ秒を算出 */
+    var ms = 60000/bpm;
     let i= -1;
     table.insertCell(1);
     table.width='100%';
